@@ -1,0 +1,8 @@
+function isPalindrome(word):
+    if length(word) <= 1:
+        return true   // base case: word with 0 or 1 character is a palindrome
+    
+    if word[0] == word[length(word) - 1]:
+        return isPalindrome(word[1:length(word) - 1])   // recursive case: compare first and last character and test the rest of the word
+    
+    return false   // recursive case: if first and last characters are different, word is not a palindrome
